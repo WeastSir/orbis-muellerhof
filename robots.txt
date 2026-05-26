@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# Versteckte Dokumente nicht indexieren — nur per QR-Code zugänglich
+Disallow: /dokumente/

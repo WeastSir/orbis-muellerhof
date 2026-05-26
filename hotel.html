@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel · Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Orbis Müllerhof"></a>
+      <button class="menu-toggle" aria-label="Menü">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="kantine.html">Kantine</a></li>
+        <li><a href="seminare.html">Seminare</a></li>
+        <li><a href="orbis-karte.html">Orbis-Karte</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="#buchen" class="nav-cta">Reservieren</a></li>
+        <li class="lang-switcher">
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-sub">
+    <div class="hero-bg"><img src="images/zimmer-1.jpg" alt="Hotelzimmer Orbis"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Wohnen mit Charakter</span>
+        <h1>Unser <em>Hotel</em></h1>
+        <p class="hero-tagline">7 individuelle Zimmer im historischen Müllerhof — moderner Komfort, warmer Charme.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUCHUNGS-BAR -->
+  <div class="container">
+    <div id="buchen" class="booking-bar">
+      <h3>Verfügbarkeit prüfen</h3>
+      <form class="booking-form" data-form>
+        <div>
+          <label>Anreise</label>
+          <input type="date" required>
+        </div>
+        <div>
+          <label>Abreise</label>
+          <input type="date" required>
+        </div>
+        <div>
+          <label>Personen</label>
+          <select><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        </div>
+        <div>
+          <label>Zimmertyp</label>
+          <select>
+            <option>Egal</option>
+            <option>Einzelzimmer</option>
+            <option>Doppelzimmer</option>
+            <option>Suite Müllerhof</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Suchen</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section>
+    <div class="container">
+      <div class="intro-split">
+        <div class="left">
+          <span class="eyebrow">Übernachten</span>
+          <h2>12 Zimmer.<br><em style="color: var(--c-brown);">12 Charaktere.</em></h2>
+        </div>
+        <div class="right">
+          <p>
+            Jedes unserer Zimmer hat seine eigene Geschichte. Wir haben das historische Gebäude mit Respekt
+            saniert und mit allem Komfort ausgestattet, den man für einen erholsamen Aufenthalt braucht —
+            Boxspringbetten, eigene Bäder, schnelles WLAN und ruhige Farben.
+          </p>
+          <p>
+            Wer länger bleibt, profitiert von unserem Orbis-Karte Programm: jede Übernachtung sammelt
+            Punkte, die im Restaurant oder beim nächsten Aufenthalt eingelöst werden können.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZIMMER -->
+  <section class="section-bg">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow center">Zimmerkategorien</span>
+        <h2 style="margin-top: 1.5rem;">Finden Sie Ihr Zimmer.</h2>
+      </div>
+
+      <div class="rooms">
+        <article class="room">
+          <div class="room-img"><img src="images/zimmer-2.jpg" alt="Einzelzimmer"></div>
+          <div class="room-body">
+            <h3>Einzelzimmer</h3>
+            <p style="color: var(--c-muted); font-size: 0.95rem;">Gemütlich und ruhig — für den entspannten Solo-Aufenthalt.</p>
+            <p class="price">CHF 145.– <small>pro Nacht</small></p>
+            <ul>
+              <li>18 m² · Boxspringbett 120 cm</li>
+              <li>Eigenes Bad mit Dusche</li>
+              <li>WLAN, Smart TV, Schreibtisch</li>
+            </ul>
+            <a href="#buchen" class="btn">Buchen</a>
+          </div>
+        </article>
+
+        <article class="room">
+          <div class="room-img"><img src="images/zimmer-1.jpg" alt="Doppelzimmer"></div>
+          <div class="room-body">
+            <h3>Doppelzimmer</h3>
+            <p style="color: var(--c-muted); font-size: 0.95rem;">Geräumig und einladend — unser Klassiker.</p>
+            <p class="price">CHF 215.– <small>pro Nacht</small></p>
+            <ul>
+              <li>26 m² · Boxspringbett 180 cm</li>
+              <li>Eigenes Bad mit Dusche</li>
+              <li>Sitzecke, WLAN, Smart TV</li>
+            </ul>
+            <a href="#buchen" class="btn">Buchen</a>
+          </div>
+        </article>
+
+        <article class="room">
+          <div class="room-img"><img src="images/lounge.jpg" alt="Suite Müllerhof"></div>
+          <div class="room-body">
+            <h3>Suite Müllerhof</h3>
+            <p style="color: var(--c-muted); font-size: 0.95rem;">Unsere grösste Kategorie — mit Wohnbereich und historischen Holzbalken.</p>
+            <p class="price">CHF 295.– <small>pro Nacht</small></p>
+            <ul>
+              <li>42 m² · Schlaf- und Wohnbereich</li>
+              <li>Bad mit Dusche und Badewanne</li>
+              <li>Historischer Charakter</li>
+            </ul>
+            <a href="#buchen" class="btn">Buchen</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Orbis Müllerhof">
+          <p>Ein Ort. Viele Momente.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <p>Schulstrasse 11</p><p>5070 Frick</p>
+          <a href="tel:+41628655380">062 865 53 80</a>
+          <a href="mailto:info@muellerhof.ch">info@muellerhof.ch</a>
+        </div>
+        <div class="footer-col">
+          <h4>Entdecken</h4>
+          <a href="hotel.html">Hotel</a>
+          <a href="restaurant.html">Restaurant</a>
+          <a href="kantine.html">Kantine</a>
+          <a href="seminare.html">Seminare</a>
+          <a href="galerie.html">Galerie</a>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <a href="hotel.html#buchen">Zimmer buchen</a>
+          <a href="restaurant.html#reservation">Tisch reservieren</a>
+          <a href="seminare.html#anfrage">Seminar anfragen</a>
+          <a href="orbis-karte.html">Orbis-Karte</a>
+          <a href="stellen.html">Stellenangebote</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Frick</p>
+        <div>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

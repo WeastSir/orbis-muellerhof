@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>TikTok Rekrutierung — Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <style>
+    .video-wrapper {
+      max-width: 400px;
+      margin: 0 auto;
+      aspect-ratio: 9/16;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    .video-wrapper video,
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 0;
+    }
+    .hidden-badge {
+      display: inline-block;
+      background: var(--color-terracotta);
+      color: white;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Orbis Müllerhof"></a>
+      <div style="color: var(--color-text-muted); font-size: 0.85rem;">
+        Geschützter Bereich · Nur via QR-Code
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top: 120px;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="hidden-badge">QR-Code Zugriff</span>
+        <h1 style="margin-bottom: 0.5rem;">TikTok Rekrutierungs-Video</h1>
+        <p style="color: var(--color-text-muted);">Lerne uns kennen und werde Teil des Müllerhof-Teams</p>
+      </div>
+
+      <!-- VIDEO EMBED -->
+      <!-- VARIANTE 1: Lokales MP4 (Video in content/video/ ablegen) -->
+      <div class="video-wrapper">
+        <video controls poster="../images/logo.png">
+          <source src="../content/video/tiktok-rekrutierung.mp4" type="video/mp4">
+          Ihr Browser unterstützt kein Video-Tag.
+        </video>
+      </div>
+
+      <!-- VARIANTE 2: TikTok-Embed (auskommentiert — bei Bedarf aktivieren)
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@orbis_muellerhof/video/XXXXXXXXX">
+        <a href="https://www.tiktok.com/@orbis_muellerhof/video/XXXXXXXXX">@orbis_muellerhof Video ansehen</a>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+      -->
+
+      <div style="max-width: 600px; margin: 3rem auto 0; text-align: center;">
+        <h3>Interesse geweckt?</h3>
+        <p>Schau dir unsere offenen Stellen an oder schick uns direkt eine Bewerbung.</p>
+        <p style="margin-top: 1.5rem;">
+          <a href="../stellen.html" class="btn">Offene Stellen ansehen</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" style="margin-top: 4rem;">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Schulstrasse 11, 5070 Frick</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

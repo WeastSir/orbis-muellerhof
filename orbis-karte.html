@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbis-Karte · Treueprogramm | Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Orbis Müllerhof"></a>
+      <button class="menu-toggle" aria-label="Menü">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="kantine.html">Kantine</a></li>
+        <li><a href="seminare.html">Seminare</a></li>
+        <li><a href="orbis-karte.html">Orbis-Karte</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="#bestellen" class="nav-cta">Karte bestellen</a></li>
+        <li class="lang-switcher">
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO im dunklen Stil mit Karte -->
+  <section class="karte-hero section-dark" style="min-height: 90vh; display: flex; align-items: center; padding-top: 8rem;">
+    <div class="container">
+      <div class="editorial">
+        <div>
+          <span class="eyebrow">Unser Treueprogramm</span>
+          <h1 style="color: var(--c-white); margin: 1.5rem 0;">Die <em style="color: var(--c-clay);">Orbis-Karte</em></h1>
+          <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; max-width: 500px;">
+            Ein Kreis. Viele Vorteile. Sammeln Sie Punkte in allen vier Bereichen — und lösen Sie diese
+            flexibel ein, wo es Ihnen am besten passt.
+          </p>
+          <div style="margin-top: 2rem;">
+            <a href="#bestellen" class="btn btn-brown">Karte kostenlos bestellen</a>
+          </div>
+        </div>
+        <div>
+          <div class="orbis-card">
+            <p class="card-eyebrow">Treueprogramm</p>
+            <h3>Orbis</h3>
+            <p class="card-sub">MÜLLERHOF</p>
+            <p class="card-name">Ein Kreis. Viele Vorteile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SO FUNKTIONIERT'S -->
+  <section>
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <span class="eyebrow center">In 4 Schritten</span>
+        <h2 style="margin: 1.5rem 0;">So einfach geht's.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p>Karte kostenlos bestellen oder im Restaurant abholen</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p>Bei jedem Besuch die Karte vorzeigen — wir buchen die Punkte direkt</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p>Punkte sammeln in allen vier Bereichen</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <p>Punkte gegen Belohnungen einlösen — wo Sie möchten</p>
+        </div>
+      </div>
+      <p style="text-align: center; font-style: italic; color: var(--c-muted); margin-top: 3rem;">
+        Einfach und unkompliziert — keine App, kein Login.
+      </p>
+    </div>
+  </section>
+
+  <!-- PUNKTE-TABELLEN -->
+  <section class="section-bg">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 4rem;">
+        <span class="eyebrow center">Punkte</span>
+        <h2 style="margin-top: 1.5rem;">Sammeln & Einlösen.</h2>
+      </div>
+      <div class="editorial">
+        <div class="points-table">
+          <h3>Punkte sammeln</h3>
+          <div class="points-row"><span>Getränk</span><span class="points-val">1 Punkt</span></div>
+          <div class="points-row"><span>Mittagessen</span><span class="points-val">5 Punkte</span></div>
+          <div class="points-row"><span>Hotelübernachtung</span><span class="points-val">15 Punkte</span></div>
+          <div class="points-row"><span>Seminarbuchung</span><span class="points-val">20 Punkte</span></div>
+        </div>
+        <div class="points-table">
+          <h3>Punkte einlösen</h3>
+          <div class="points-row"><span>Kostenloser Kaffee</span><span class="points-val">10 Punkte</span></div>
+          <div class="points-row"><span>Kostenloses Dessert</span><span class="points-val">20 Punkte</span></div>
+          <div class="points-row"><span>Kostenloses Mittagessen</span><span class="points-val">35 Punkte</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESTELLEN -->
+  <section id="bestellen" class="section-dark">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="eyebrow center">Karte bestellen</span>
+        <h2 style="margin: 1.5rem 0;">Starten Sie noch heute.</h2>
+        <p style="color: rgba(255,255,255,0.8);">Die Karte ist kostenlos. Wählen Sie selbst, ob Sie sie per Post, im Restaurant oder digital möchten.</p>
+      </div>
+      <form class="form-stack" data-form style="max-width: 600px; margin: 3rem auto 0;">
+        <input type="text" placeholder="Vor- und Nachname" required>
+        <input type="email" placeholder="E-Mail" required>
+        <input type="text" placeholder="Adresse (für postalische Zustellung)">
+        <input type="tel" placeholder="Telefon (optional)">
+        <select required>
+          <option value="">Lieferart wählen</option>
+          <option>Per Post zusenden</option>
+          <option>Im Restaurant abholen</option>
+          <option>Digitale Karte (per E-Mail)</option>
+        </select>
+        <button type="submit" class="btn btn-brown" style="align-self: flex-start;">Karte kostenlos bestellen</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><img src="images/logo.png" alt="Orbis Müllerhof"><p>Ein Ort. Viele Momente.</p></div>
+        <div class="footer-col"><h4>Kontakt</h4><p>Schulstrasse 11</p><p>5070 Frick</p><a href="tel:+41628655380">062 865 53 80</a><a href="mailto:info@muellerhof.ch">info@muellerhof.ch</a></div>
+        <div class="footer-col"><h4>Entdecken</h4><a href="hotel.html">Hotel</a><a href="restaurant.html">Restaurant</a><a href="kantine.html">Kantine</a><a href="seminare.html">Seminare</a><a href="galerie.html">Galerie</a></div>
+        <div class="footer-col"><h4>Service</h4><a href="hotel.html#buchen">Zimmer buchen</a><a href="restaurant.html#reservation">Tisch reservieren</a><a href="seminare.html#anfrage">Seminar anfragen</a><a href="orbis-karte.html">Orbis-Karte</a><a href="stellen.html">Stellen</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Frick</p>
+        <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

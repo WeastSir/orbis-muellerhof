@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Projektarbeit — Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <style>
+    .pdf-viewer {
+      width: 100%;
+      height: 85vh;
+      border: 1px solid var(--color-light-grey);
+      border-radius: var(--radius);
+      background: var(--color-bg-alt);
+    }
+    .hidden-badge {
+      display: inline-block;
+      background: var(--color-terracotta);
+      color: white;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimaler Header — keine Navigation, da diese Seite versteckt ist -->
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Orbis Müllerhof"></a>
+      <div style="color: var(--color-text-muted); font-size: 0.85rem;">
+        Geschützter Bereich · Nur via QR-Code
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top: 120px;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="hidden-badge">QR-Code Zugriff</span>
+        <h1 style="margin-bottom: 0.5rem;">Projektarbeit</h1>
+        <p style="color: var(--color-text-muted);">Schweizerische Hotelfachschule — Betriebskonzept Orbis Müllerhof</p>
+      </div>
+
+      <!-- PDF EMBED -->
+      <iframe
+        class="pdf-viewer"
+        src="../content/pdf/projektarbeit.pdf#view=FitH"
+        title="Projektarbeit Orbis Müllerhof">
+        <p>Ihr Browser kann das PDF nicht anzeigen.
+        <a href="../content/pdf/projektarbeit.pdf" download>PDF herunterladen</a></p>
+      </iframe>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="../content/pdf/projektarbeit.pdf" class="btn" download>
+          📄 PDF herunterladen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" style="margin-top: 4rem;">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Schulstrasse 11, 5070 Frick</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

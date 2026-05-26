@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt · Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Orbis Müllerhof"></a>
+      <button class="menu-toggle" aria-label="Menü">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="kantine.html">Kantine</a></li>
+        <li><a href="seminare.html">Seminare</a></li>
+        <li><a href="orbis-karte.html">Orbis-Karte</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="hotel.html#buchen" class="nav-cta">Reservieren</a></li>
+        <li class="lang-switcher">
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero hero-sub">
+    <div class="hero-bg"><img src="images/hero-aussen.jpg" alt="Orbis Müllerhof"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Wir freuen uns auf Sie</span>
+        <h1><em>Kontakt</em></h1>
+        <p class="hero-tagline">So erreichen Sie uns — und so finden Sie zu uns.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="editorial">
+        <div>
+          <span class="eyebrow">Adresse</span>
+          <h2 style="margin: 1.5rem 0;">Mitten in <em style="color: var(--c-brown);">Frick.</em></h2>
+          <div style="font-size: 1.1rem; line-height: 2;">
+            <p><strong>Orbis Müllerhof</strong><br>Schulstrasse 11<br>5070 Frick</p>
+            <p style="margin-top: 1.5rem;">
+              <strong style="color: var(--c-brown); display: block;">Telefon</strong>
+              <a href="tel:+41628655380" style="font-size: 1.4rem; font-family: var(--f-serif);">062 865 53 80</a>
+            </p>
+            <p>
+              <strong style="color: var(--c-brown); display: block;">E-Mail</strong>
+              <a href="mailto:info@muellerhof.ch" style="font-size: 1.1rem;">info@muellerhof.ch</a>
+            </p>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--c-muted);">
+              <strong style="color: var(--c-brown); display: block;">Anfahrt</strong>
+              5 Min. zu Fuss vom Bahnhof Frick. Parkplätze direkt am Haus.
+            </p>
+          </div>
+        </div>
+
+        <form class="form-stack" data-form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="E-Mail" required>
+          <select required>
+            <option value="">Betreff</option>
+            <option>Allgemeine Anfrage</option>
+            <option>Hotelreservation</option>
+            <option>Tischreservation</option>
+            <option>Seminar / Co-Working</option>
+            <option>Orbis-Karte</option>
+            <option>Bewerbung</option>
+          </select>
+          <textarea placeholder="Ihre Nachricht..." required></textarea>
+          <button type="submit" class="btn" style="align-self: flex-start;">Senden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- KARTE -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div style="aspect-ratio: 21/8; overflow: hidden;">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=8.0123%2C47.5083%2C8.0223%2C47.5133&amp;layer=mapnik&amp;marker=47.5108%2C8.0173"
+          style="width: 100%; height: 100%; border: 0;"
+          loading="lazy"
+          title="Karte Frick"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><img src="images/logo.png" alt="Orbis Müllerhof"><p>Ein Ort. Viele Momente.</p></div>
+        <div class="footer-col"><h4>Kontakt</h4><p>Schulstrasse 11</p><p>5070 Frick</p><a href="tel:+41628655380">062 865 53 80</a><a href="mailto:info@muellerhof.ch">info@muellerhof.ch</a></div>
+        <div class="footer-col"><h4>Entdecken</h4><a href="hotel.html">Hotel</a><a href="restaurant.html">Restaurant</a><a href="kantine.html">Kantine</a><a href="seminare.html">Seminare</a><a href="galerie.html">Galerie</a></div>
+        <div class="footer-col"><h4>Service</h4><a href="hotel.html#buchen">Zimmer buchen</a><a href="restaurant.html#reservation">Tisch reservieren</a><a href="seminare.html#anfrage">Seminar anfragen</a><a href="orbis-karte.html">Orbis-Karte</a><a href="stellen.html">Stellen</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Frick</p>
+        <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

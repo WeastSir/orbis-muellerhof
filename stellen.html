@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellen · Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <style>
+    .job-card {
+      background: var(--c-white);
+      padding: 2.5rem;
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--c-clay);
+    }
+    .job-card h3 { margin-bottom: 0.3rem; font-size: 1.8rem; }
+    .job-meta {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--c-brown);
+      margin-bottom: 1.5rem;
+    }
+    .job-card h4 {
+      font-family: var(--f-serif);
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 600;
+      color: var(--c-brown);
+      margin: 1.5rem 0 0.6rem;
+    }
+    .job-card ul {
+      list-style: none;
+      margin: 0.5rem 0;
+    }
+    .job-card ul li {
+      padding: 0.3rem 0;
+      color: var(--c-text);
+    }
+    .job-card ul li::before {
+      content: '○ ';
+      color: var(--c-brown);
+    }
+
+    .benefit {
+      background: var(--c-white);
+      padding: 2rem;
+      border-top: 3px solid var(--c-brown);
+    }
+    .benefit h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--c-brown);
+    }
+    .benefit p {
+      color: var(--c-muted);
+      font-size: 0.95rem;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Orbis Müllerhof"></a>
+      <button class="menu-toggle" aria-label="Menü">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="kantine.html">Kantine</a></li>
+        <li><a href="seminare.html">Seminare</a></li>
+        <li><a href="orbis-karte.html">Orbis-Karte</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="hotel.html#buchen" class="nav-cta">Reservieren</a></li>
+        <li class="lang-switcher">
+          <button data-lang="de">DE</button>
+          <button data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero hero-sub">
+    <div class="hero-bg"><img src="images/lounge.jpg" alt="Team Orbis"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Werden Sie Teil unseres Teams</span>
+        <h1><em>Stellen</em></h1>
+        <p class="hero-tagline">Wir suchen motivierte Menschen mit Herz und Leidenschaft.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFENE STELLEN -->
+  <section>
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <span class="eyebrow center">Offene Positionen</span>
+        <h2 style="margin: 1.5rem 0;">Aktuelle Stellen.</h2>
+      </div>
+
+      <!-- STELLE 1: Restaurantfachperson -->
+      <article class="job-card">
+        <h3>Restaurantfachperson EFZ 80–100%</h3>
+        <p class="job-meta">Restaurant · Festanstellung · ab sofort</p>
+
+        <p>Zur Verstärkung unseres Restaurant-Teams suchen wir eine engagierte Persönlichkeit, die unsere Gäste mit Herzlichkeit und Fachwissen betreut.</p>
+
+        <h4>Ihre Aufgaben</h4>
+        <ul>
+          <li>Service und Beratung im À-la-carte Restaurant (Erker und Stübli)</li>
+          <li>Mise en Place und ordnungsgemässe Reinigung der Arbeitsbereiche</li>
+          <li>Mithilfe bei Bankett- und Seminaranlässen</li>
+          <li>Aktive Förderung der Orbis-Karte bei den Gästen</li>
+        </ul>
+
+        <h4>Sie bringen mit</h4>
+        <ul>
+          <li>Abgeschlossene Ausbildung als Restaurantfachperson EFZ</li>
+          <li>Freude am Gästekontakt und gepflegtes Auftreten</li>
+          <li>Teamfähigkeit und Belastbarkeit</li>
+          <li>Deutsch fliessend, weitere Sprachen von Vorteil</li>
+        </ul>
+      </article>
+
+      <!-- STELLE 2: Koch -->
+      <article class="job-card">
+        <h3>Koch / Köchin 100%</h3>
+        <p class="job-meta">Restaurant & Kantine · Festanstellung · per 1. August</p>
+
+        <p>Sie kochen mit Leidenschaft und schätzen regionale Produkte? Dann verstärken Sie unser Küchenteam und gestalten Sie unsere saisonale Karte aktiv mit.</p>
+
+        <h4>Ihre Aufgaben</h4>
+        <ul>
+          <li>Zubereitung von Speisen für Restaurant, Kantine und Bankette</li>
+          <li>Mitverantwortung für die Warenwirtschaft</li>
+          <li>Einhaltung der Hygiene- und Qualitätsvorschriften</li>
+          <li>Mitgestaltung saisonaler Menüs</li>
+        </ul>
+
+        <h4>Sie bringen mit</h4>
+        <ul>
+          <li>Abgeschlossene Ausbildung als Koch/Köchin EFZ</li>
+          <li>Berufserfahrung in vergleichbarer Position von Vorteil</li>
+          <li>Kreativität und Freude an regionalen Produkten</li>
+          <li>Teamgeist und Zuverlässigkeit</li>
+        </ul>
+      </article>
+
+      <!-- STELLE 3: Lehre als Koch -->
+      <article class="job-card">
+        <h3>Lehrstelle Koch / Köchin EFZ</h3>
+        <p class="job-meta">Lehre · 3 Jahre · per August 2026</p>
+
+        <p>Du liebst gutes Essen und möchtest deine Leidenschaft zum Beruf machen? Bei uns lernst du in einem familiären Team alle Facetten des Kochberufs kennen — vom Restaurant über die Kantine bis zu Banketten.</p>
+
+        <h4>Was wir dir bieten</h4>
+        <ul>
+          <li>3-jährige Ausbildung in einem vielseitigen Betrieb</li>
+          <li>Erfahrene Ausbildungsverantwortliche</li>
+          <li>Einblick in À-la-carte, Kantine und Bankett</li>
+          <li>Unterstützung in der Berufsfachschule</li>
+        </ul>
+
+        <h4>Du bringst mit</h4>
+        <ul>
+          <li>Abgeschlossene obligatorische Schulzeit</li>
+          <li>Freude am Kochen und an guten Lebensmitteln</li>
+          <li>Zuverlässigkeit, Teamgeist und Motivation</li>
+          <li>Schnupperlehre absolviert (oder offen für eine)</li>
+        </ul>
+      </article>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="mailto:info@muellerhof.ch?subject=Bewerbung" class="btn">Jetzt bewerben</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section-bg">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <span class="eyebrow center">Was wir bieten</span>
+        <h2 style="margin: 1.5rem 0;">Mehr als nur<br><em style="color: var(--c-brown);">ein Arbeitsplatz.</em></h2>
+        <p style="color: var(--c-muted);">
+          Im Orbis Müllerhof setzen wir auf langfristige Beziehungen — zu unseren Gästen und zu unserem Team.
+          Diese Benefits warten auf Sie:
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit">
+          <h3>Weiterbildung</h3>
+          <p>
+            Wir beteiligen uns jährlich mit einem festgelegten Budget von <strong>CHF 10'000.–</strong>
+            an Kursen und Schulungen in den Bereichen Gastronomie, Hotellerie oder Führung.
+            Sie dürfen passende Kurse selbst vorschlagen und sich direkt an die Betriebsleitung wenden.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <h3>Mitarbeiterevents</h3>
+          <p>
+            Regelmässige Mitarbeiterevents fördern den Teamzusammenhalt und schaffen ein familiäres
+            Arbeitsumfeld. Lernen Sie Ihre Kolleg:innen auch ausserhalb des Arbeitsalltags näher kennen
+            und sammeln Sie gemeinsam neue Erfahrungen.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <h3>Rabatte & Verpflegung</h3>
+          <p>
+            <strong>25% Rabatt</strong> auf Essen im Restaurant (bis 4 Personen, ohne Getränke),
+            <strong>kostenloser Kaffee</strong> und <strong>eine Mahlzeit gratis</strong> während
+            jeder Arbeitsschicht (Mittag oder Abend) — erleben Sie unser Angebot selbst.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INITIATIVBEWERBUNG -->
+  <section class="section-dark">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <span class="eyebrow center">Initiativbewerbung</span>
+        <h2 style="margin: 1.5rem 0;">Nichts passendes dabei?</h2>
+        <p style="color: rgba(255,255,255,0.85); margin-bottom: 2rem;">
+          Schicken Sie uns trotzdem Ihre Bewerbung. Wir freuen uns über jede motivierte Anfrage.
+        </p>
+        <a href="mailto:info@muellerhof.ch" class="btn btn-brown">Bewerbung schicken</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><img src="images/logo.png" alt="Orbis Müllerhof"><p>Ein Ort. Viele Momente.</p></div>
+        <div class="footer-col"><h4>Kontakt</h4><p>Schulstrasse 11</p><p>5070 Frick</p><a href="tel:+41628655380">062 865 53 80</a><a href="mailto:info@muellerhof.ch">info@muellerhof.ch</a></div>
+        <div class="footer-col"><h4>Entdecken</h4><a href="hotel.html">Hotel</a><a href="restaurant.html">Restaurant</a><a href="kantine.html">Kantine</a><a href="seminare.html">Seminare</a><a href="galerie.html">Galerie</a></div>
+        <div class="footer-col"><h4>Service</h4><a href="hotel.html#buchen">Zimmer buchen</a><a href="restaurant.html#reservation">Tisch reservieren</a><a href="seminare.html#anfrage">Seminar anfragen</a><a href="orbis-karte.html">Orbis-Karte</a><a href="stellen.html">Stellen</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Frick</p>
+        <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
