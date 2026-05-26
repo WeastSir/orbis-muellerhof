@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <text x="200" y="105" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-style="italic" fill="#80644c" font-weight="500">Orbis</text>
+  <circle cx="118" cy="78" r="9" fill="#80644c"/>
+  <circle cx="283" cy="130" r="9" fill="#80644c"/>
+  <text x="200" y="140" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#80644c" letter-spacing="6" font-weight="600">MÜLLERHOF</text>
+</svg>

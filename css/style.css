@@ -73,13 +73,15 @@ h4 { font-size: 1.05rem; font-family: var(--f-sans); font-weight: 500; letter-sp
 }
 .eyebrow.center {
   padding-left: 0;
-  padding: 0 50px;
+  padding-top: 20px;
 }
 .eyebrow.center::before {
   content: '';
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
+  width: 40px;
+  height: 1px;
 }
 
 .serif-quote {
@@ -292,10 +294,7 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 0 var(--gutter) clamp(3rem, 6vh, 4rem);
-  display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 2rem;
-  align-items: end;
+  display: block;
 }
 
 .hero-text {
