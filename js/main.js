@@ -98,6 +98,28 @@
     });
   }
 
+  // ---------- Hero Parallax ----------
+  function initParallax() {
+    const heroImg = document.querySelector('.hero-bg img');
+    if (!heroImg) return;
+
+    let ticking = false;
+    function update() {
+      const scrolled = window.scrollY;
+      // Image moves 0.4× slower than scroll - creates parallax depth
+      heroImg.style.transform = `translate3d(0, ${scrolled * 0.4}px, 0)`;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    update();
+  }
+
   // ---------- Init ----------
   document.addEventListener('DOMContentLoaded', () => {
     setLang(getLang());
@@ -109,5 +131,6 @@
     highlightActive();
     initLightbox();
     initForms();
+    initParallax();
   });
 })();
