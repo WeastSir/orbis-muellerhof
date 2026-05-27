@@ -16,25 +16,49 @@
       background: var(--c-dark);
       color: #fff;
       overflow: hidden;
-      min-height: 70vh;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      align-items: stretch;
       padding-top: 110px;
+      min-height: 90vh;
+    }
+    .stelle-hero-image-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .stelle-hero-image-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Gradient overlay: dark on the left → transparent on the right */
+    .stelle-hero-image-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(43,38,32,0.95) 0%,
+        rgba(43,38,32,0.85) 35%,
+        rgba(43,38,32,0.3) 55%,
+        rgba(43,38,32,0.1) 70%);
+    }
+    .stelle-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+      display: flex;
+      align-items: center;
+      min-height: calc(90vh - 110px);
     }
     .stelle-hero-text {
-      padding: clamp(2rem, 5vw, 5rem) clamp(1.5rem, 5vw, 5rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 720px;
-      margin-left: auto;
+      max-width: 540px;
     }
     .stelle-hero-text .logo-block {
-      height: 80px;
+      height: clamp(64px, 8vw, 88px);
       width: auto;
       filter: brightness(0) invert(0.95);
       margin-bottom: 1.5rem;
+      display: block;
     }
     .stelle-hero-text .tagline-small {
       font-size: 0.78rem;
@@ -48,38 +72,32 @@
     .stelle-hero-text .wir-suchen {
       font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      font-size: clamp(1.3rem, 1.8vw, 1.7rem);
       color: rgba(255,255,255,0.85);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
+      line-height: 1;
     }
     .stelle-hero-text h1 {
       font-family: var(--f-serif);
       font-weight: 600;
-      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-size: clamp(2.4rem, 5vw, 4rem);
       color: var(--c-clay);
       line-height: 1;
       margin: 0;
     }
     .stelle-hero-text .prozent {
       font-family: var(--f-serif);
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
       color: #fff;
-      margin: 0.3rem 0 2rem;
+      margin: 0.3rem 0 1.5rem;
+      line-height: 1;
     }
     .stelle-hero-text .intro {
-      font-size: clamp(1rem, 1.2vw, 1.1rem);
-      color: rgba(255,255,255,0.85);
-      max-width: 460px;
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+      color: rgba(255,255,255,0.88);
+      max-width: 440px;
       line-height: 1.7;
-    }
-    .stelle-hero-image {
-      position: relative;
-      overflow: hidden;
-    }
-    .stelle-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      margin: 0;
     }
 
     /* === Benefits Section === */
@@ -240,16 +258,13 @@
 
     /* === Responsive === */
     @media (max-width: 900px) {
-      .stelle-hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-      .stelle-hero-text {
-        padding: 3rem 1.5rem;
-        margin-left: 0;
-      }
-      .stelle-hero-image {
-        min-height: 320px;
+      .stelle-hero { min-height: auto; }
+      .stelle-hero-inner { min-height: 70vh; }
+      .stelle-hero-image-bg::after {
+        background: linear-gradient(180deg,
+          rgba(43,38,32,0.85) 0%,
+          rgba(43,38,32,0.75) 60%,
+          rgba(43,38,32,0.9) 100%);
       }
       .photo-strip {
         grid-template-columns: 1fr;
@@ -286,16 +301,18 @@
 
   <!-- HERO -->
   <section class="stelle-hero">
-    <div class="stelle-hero-text">
-      <img src="images/logo.png" alt="Orbis Müllerhof" class="logo-block">
-      <p class="tagline-small">GENIESSEN.  BEGEGNEN.  BLEIBEN.</p>
-      <p class="wir-suchen">Wir suchen eine/n</p>
-      <h1>Betriebsleiter/in</h1>
-      <p class="prozent">100 %</p>
-      <p class="intro">Du führst mit Herz, denkst unternehmerisch und liebst Gastfreundschaft? Dann gestalte mit uns ein neues Kapitel im Orbis.</p>
-    </div>
-    <div class="stelle-hero-image">
+    <div class="stelle-hero-image-bg">
       <img src="images/hero-aussen.jpg" alt="Orbis Müllerhof">
+    </div>
+    <div class="stelle-hero-inner">
+      <div class="stelle-hero-text">
+        <img src="images/logo.png" alt="Orbis Müllerhof" class="logo-block">
+        <p class="tagline-small">GENIESSEN.  BEGEGNEN.  BLEIBEN.</p>
+        <p class="wir-suchen">Wir suchen eine/n</p>
+        <h1>Betriebsleiter/in</h1>
+        <p class="prozent">100 %</p>
+        <p class="intro">Du führst mit Herz, denkst unternehmerisch und liebst Gastfreundschaft? Dann gestalte mit uns ein neues Kapitel im Orbis.</p>
+      </div>
     </div>
   </section>
 
