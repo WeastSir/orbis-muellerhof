@@ -120,6 +120,57 @@
     update();
   }
 
+  // ---------- Cookie Banner ----------
+  function initCookieBanner() {
+    const KEY = 'orbis_cookies_v1';
+    if (localStorage.getItem(KEY)) return;
+
+    const lang = getLang();
+    const texts = {
+      de: {
+        title: 'Cookies & Datenschutz',
+        body: 'Wir verwenden nur technisch notwendige Cookies (z.B. Sprachauswahl). Keine Tracker, keine Werbung. ',
+        link: 'Mehr in der Datenschutzerklärung',
+        accept: 'Einverstanden',
+        decline: 'Nur notwendige'
+      },
+      en: {
+        title: 'Cookies & Privacy',
+        body: 'We only use technically necessary cookies (e.g. language selection). No tracking, no ads. ',
+        link: 'More in our privacy policy',
+        accept: 'Got it',
+        decline: 'Necessary only'
+      }
+    };
+    const t = texts[lang] || texts.de;
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML = `
+      <div class="cookie-inner">
+        <div class="cookie-text">
+          <strong>${t.title}</strong>
+          <p>${t.body}<a href="datenschutz.html">${t.link}</a>.</p>
+        </div>
+        <div class="cookie-actions">
+          <button class="cookie-btn cookie-btn-secondary" data-action="decline">${t.decline}</button>
+          <button class="cookie-btn cookie-btn-primary" data-action="accept">${t.accept}</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    setTimeout(() => banner.classList.add('visible'), 100);
+
+    banner.addEventListener('click', e => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      localStorage.setItem(KEY, btn.dataset.action);
+      banner.classList.remove('visible');
+      setTimeout(() => banner.remove(), 400);
+    });
+  }
+
   // ---------- Init ----------
   document.addEventListener('DOMContentLoaded', () => {
     setLang(getLang());
@@ -132,5 +183,6 @@
     initLightbox();
     initForms();
     initParallax();
+    initCookieBanner();
   });
 })();
