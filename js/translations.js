@@ -35,7 +35,7 @@ const TRANSLATIONS = {
     area_restaurant_title: "Restaurant",
     area_restaurant_desc: "Saisonale Küche mit regionalen Produkten",
     area_kantine_title: "Kantine",
-    area_kantine_desc: "Frisch, regional und vil zfrid",
+    area_kantine_desc: "Frisch, regional und einfach gut",
     area_seminare_title: "Seminare",
     area_seminare_desc: "Moderne Tagungsräume für jeden Anlass",
 
@@ -86,7 +86,7 @@ const TRANSLATIONS = {
 
     // Kantine
     kantine_title: "Kantine",
-    kantine_subtitle: "Frisch, regional und vil zfrid",
+    kantine_subtitle: "Frisch, regional und einfach gut",
     kantine_intro: "Täglich frisch zubereitete Menüs zu fairen Preisen. Vegetarische und vegane Optionen sind selbstverständlich Teil unseres Angebots.",
     weekly_menu: "Wochenmenü",
 
