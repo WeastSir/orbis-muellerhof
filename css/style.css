@@ -315,6 +315,23 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
 }
 .hero-text .hero-ctas {
   justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.hero-text .hero-ctas .btn {
+  white-space: nowrap;
+}
+@media (max-width: 1100px) {
+  .hero-text { max-width: 90vw; }
+  .hero-text .hero-ctas { justify-content: flex-end; gap: 0.6rem; }
+  .hero-text .hero-ctas .btn {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+}
+@media (max-width: 700px) {
+  .hero-text .hero-ctas { flex-direction: column; align-items: flex-end; width: 100%; }
+  .hero-text .hero-ctas .btn { width: auto; }
 }
 
 .hero-text {
@@ -755,14 +772,12 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   aspect-ratio: 1.586/1;        /* ISO ID-1 Kreditkartenformat */
   background: #1d1a17;          /* dunkles Braun-Schwarz */
   border-radius: 10px;
-  padding: 1.8rem 2rem;
+  padding: 1.4rem 1.8rem;
   position: relative;
   overflow: hidden;
   color: #A5B080;               /* Olive-Sage Grün */
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
 }
 .orbis-card .card-eyebrow {
   font-size: 0.62rem;
@@ -770,69 +785,31 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   text-transform: uppercase;
   color: #A5B080;
   margin: 0;
+  position: absolute;
+  top: 1.4rem;
+  left: 1.8rem;
 }
-.orbis-card .card-center {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.orbis-card .card-logo {
-  font-family: var(--f-serif);
-  font-style: italic;
-  color: #A5B080;
-  font-size: clamp(2.6rem, 5vw, 3.4rem);
-  line-height: 0.9;
-  text-align: center;
-  margin: 0;
-}
-.orbis-card .card-logo small {
+.orbis-card .card-logo-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  width: 50%;
+  height: auto;
   display: block;
-  font-family: var(--f-sans);
-  font-style: normal;
-  font-size: 0.7rem;
-  letter-spacing: 5px;
-  margin-top: 0.4rem;
-  opacity: 0.85;
-}
-.orbis-card .card-tagline {
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  color: #A5B080;
-  margin: 0;
-  text-align: left;
-}
-/* legacy support — old class names still work */
-.orbis-card h3 {
-  font-family: var(--f-serif);
-  font-style: italic;
-  color: #A5B080;
-  font-size: clamp(2.4rem, 5vw, 3rem);
-  margin: 0;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-}
-.orbis-card .card-sub {
-  font-size: 0.7rem;
-  letter-spacing: 5px;
-  color: #A5B080;
-  opacity: 0.85;
-  text-align: center;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  margin: 0.3rem 0 0;
 }
 .orbis-card .card-name {
   position: absolute;
-  bottom: 1.5rem;
-  left: 2rem;
+  bottom: 1.4rem;
+  left: 1.8rem;
   font-size: 0.85rem;
   letter-spacing: 1px;
   color: #A5B080;
+  margin: 0;
 }
+/* Legacy h3/card-sub (alte Struktur ausblenden — wird durch Logo ersetzt) */
+.orbis-card h3,
+.orbis-card .card-sub { display: none; }
 
 .steps {
   display: grid;
