@@ -791,11 +791,11 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   left: 1.5rem;
 }
 .orbis-card .card-logo-img {
-  max-width: 55%;
-  max-height: 55%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: auto !important;
+  height: clamp(60px, 11vw, 110px) !important;
+  max-width: 60% !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
   display: block;
 }
 .orbis-card .card-name {
