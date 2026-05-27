@@ -10,249 +10,220 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
   <style>
-    /* ======================================================
-       FLYER-PAGE  —  matches the printed PDF design 1:1
-       ====================================================== */
-    :root {
-      --olive: #4B5241;
-      --olive-2: #585F4C;
-      --cream: #F2EBDE;
-      --cream-2: #ebe2d3;
-      --accent: #C8915A;
-      --footer: #1d1a17;
-    }
-    .flyer-wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      box-shadow: 0 30px 80px rgba(43,38,32,0.18);
-      background: var(--cream);
-    }
-
-    /* === TOP — Olive Header === */
-    .flyer-top {
-      background: var(--olive);
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      min-height: 540px;
+    /* === Stelle Page Styles === */
+    .stelle-hero {
       position: relative;
-      overflow: hidden;
-    }
-    .flyer-top-left {
-      padding: 3rem 2.5rem 3rem 3.5rem;
+      background: var(--c-dark);
       color: #fff;
+      overflow: hidden;
+      min-height: 70vh;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: stretch;
+      padding-top: 110px;
+    }
+    .stelle-hero-text {
+      padding: clamp(2rem, 5vw, 5rem) clamp(1.5rem, 5vw, 5rem);
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 720px;
+      margin-left: auto;
     }
-    .flyer-top-left .logo-flyer {
-      height: 90px;
+    .stelle-hero-text .logo-block {
+      height: 80px;
       width: auto;
       filter: brightness(0) invert(0.95);
-      margin-bottom: 1rem;
-    }
-    .flyer-top-left .geniessen {
-      font-size: 0.78rem;
-      letter-spacing: 3px;
-      color: rgba(255,255,255,0.7);
       margin-bottom: 1.5rem;
     }
-    .flyer-top-left .geniessen::after {
-      content: '';
-      display: block;
-      width: 50px; height: 1px;
-      background: var(--accent);
-      margin-top: 0.8rem;
+    .stelle-hero-text .tagline-small {
+      font-size: 0.78rem;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--c-clay);
+      max-width: 280px;
     }
-    .flyer-top-left .wir-suchen {
-      font-family: 'Cormorant Garamond', serif;
+    .stelle-hero-text .wir-suchen {
+      font-family: var(--f-serif);
       font-style: italic;
-      font-size: 1.8rem;
-      color: rgba(255,255,255,0.92);
+      font-size: clamp(1.4rem, 2vw, 1.9rem);
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.5rem;
+    }
+    .stelle-hero-text h1 {
+      font-family: var(--f-serif);
+      font-weight: 600;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      color: var(--c-clay);
+      line-height: 1;
       margin: 0;
     }
-    .flyer-top-left h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
-      color: var(--accent);
-      line-height: 1;
-      margin: 0.2rem 0;
-    }
-    .flyer-top-left .prozent {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
+    .stelle-hero-text .prozent {
+      font-family: var(--f-serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
       color: #fff;
-      margin-bottom: 1.2rem;
+      margin: 0.3rem 0 2rem;
     }
-    .flyer-top-left .intro-text {
-      font-size: 1rem;
+    .stelle-hero-text .intro {
+      font-size: clamp(1rem, 1.2vw, 1.1rem);
       color: rgba(255,255,255,0.85);
-      line-height: 1.6;
-      max-width: 380px;
-      margin-top: 0.5rem;
+      max-width: 460px;
+      line-height: 1.7;
     }
-    .flyer-top-right {
+    .stelle-hero-image {
       position: relative;
       overflow: hidden;
     }
-    .flyer-top-right img {
+    .stelle-hero-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    /* === MIDDLE — Cream Benefits === */
-    .flyer-mid {
-      background: var(--cream);
-      padding: 4rem 2rem 2rem;
+    /* === Benefits Section === */
+    .benefits-section {
+      background: var(--c-bg-2);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+    .benefits-section .container {
+      max-width: 1400px;
+    }
+    .benefits-intro {
       text-align: center;
+      max-width: 760px;
+      margin: 0 auto 4rem;
     }
-    .flyer-mid .eyebrow-flyer {
-      font-size: 0.78rem;
-      letter-spacing: 4px;
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
-      padding-top: 1.2rem;
+    .benefits-intro h2 {
+      margin: 1.2rem 0 1.5rem;
+      font-size: clamp(2rem, 4vw, 3.2rem);
     }
-    .flyer-mid .eyebrow-flyer::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 50px; height: 1px;
-      background: var(--accent);
-    }
-    .flyer-mid h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: #2b2620;
-      margin: 1rem 0 1.5rem;
-    }
-    .flyer-mid h2 em {
+    .benefits-intro h2 em {
       font-style: italic;
-      color: var(--accent);
+      color: var(--c-clay);
     }
-    .flyer-mid .desc {
-      max-width: 700px;
-      margin: 0 auto 3rem;
-      color: #6b655d;
-      font-size: 1rem;
+    .benefits-intro p {
+      color: var(--c-muted);
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
       line-height: 1.6;
     }
-    .benefits-row {
+    .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: clamp(1.5rem, 3vw, 2.5rem);
     }
-    .benefit-card {
+    .benefit {
       text-align: center;
-      padding: 0 0.4rem;
     }
     .benefit-icon {
-      width: 80px;
-      height: 80px;
+      width: clamp(70px, 7vw, 90px);
+      height: clamp(70px, 7vw, 90px);
       border-radius: 50%;
-      background: var(--olive);
+      background: var(--c-dark);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.2rem;
-      color: var(--accent);
+      margin: 0 auto 1.5rem;
     }
     .benefit-icon svg {
-      width: 38px;
-      height: 38px;
-      stroke: var(--accent);
+      width: 45%;
+      height: 45%;
+      stroke: var(--c-clay);
       fill: none;
-      stroke-width: 1.6;
+      stroke-width: 1.7;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .benefit-card h4 {
-      font-size: 0.95rem;
+    .benefit h3 {
+      font-family: var(--f-sans);
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
       font-weight: 600;
-      color: #2b2620;
-      margin: 0 0 1rem;
+      color: var(--c-dark);
+      margin-bottom: 1rem;
       letter-spacing: 0;
       text-transform: none;
-      font-family: 'Inter', sans-serif;
       line-height: 1.3;
     }
-    .benefit-card p {
-      font-size: 0.82rem;
-      color: #6b655d;
-      line-height: 1.5;
+    .benefit p {
+      font-size: 0.88rem;
+      color: var(--c-muted);
+      line-height: 1.55;
       margin: 0;
     }
 
-    /* === PHOTO STRIP === */
+    /* === Photo Strip === */
     .photo-strip {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 6px;
-      margin-top: 3rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(6px, 0.5vw, 10px);
+      margin-top: clamp(3rem, 5vw, 5rem);
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 var(--gutter);
     }
     .photo-strip img {
       width: 100%;
-      height: 220px;
+      aspect-ratio: 4/3;
       object-fit: cover;
       display: block;
     }
 
-    /* === CTA dark === */
-    .flyer-cta {
-      background: var(--olive);
-      padding: 2rem 3rem;
+    /* === CTA Section === */
+    .stelle-cta {
+      background: var(--c-dark);
+      padding: clamp(3rem, 5vw, 4rem) 0;
+    }
+    .stelle-cta .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
       flex-wrap: wrap;
     }
-    .flyer-cta .left {
+    .stelle-cta-left {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      color: #fff;
+      flex: 1;
+      min-width: 320px;
     }
-    .leaf-icon {
-      width: 48px;
-      height: 48px;
+    .leaf-circle {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      border: 1px solid var(--accent);
+      border: 1px solid var(--c-clay);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .leaf-icon svg {
-      width: 22px; height: 22px;
-      stroke: var(--accent);
+    .leaf-circle svg {
+      width: 26px; height: 26px;
+      stroke: var(--c-clay);
       fill: none;
       stroke-width: 1.6;
     }
-    .flyer-cta h3 {
-      font-family: 'Cormorant Garamond', serif;
+    .stelle-cta h2 {
+      font-family: var(--f-serif);
       font-style: italic;
-      font-size: clamp(1.3rem, 2.4vw, 1.8rem);
-      color: var(--accent);
-      margin: 0 0 0.2rem;
+      color: var(--c-clay);
+      font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+      margin: 0 0 0.3rem;
     }
-    .flyer-cta .sub {
-      font-size: 0.92rem;
+    .stelle-cta .sub {
       color: rgba(255,255,255,0.8);
       margin: 0;
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
     }
-    .btn-bewerben {
+    .btn-jetzt-bewerben {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-      padding: 1rem 2.5rem;
-      border: 1.5px solid var(--accent);
-      color: var(--accent);
+      gap: 0.8rem;
+      padding: 1.1rem 2.8rem;
+      border: 1.5px solid var(--c-clay);
+      color: var(--c-clay);
       text-decoration: none;
       font-size: 0.85rem;
       letter-spacing: 3px;
@@ -260,62 +231,32 @@
       font-weight: 500;
       transition: all 0.25s;
       background: transparent;
-    }
-    .btn-bewerben:hover {
-      background: var(--accent);
-      color: var(--olive);
-    }
-
-    /* === FOOTER === */
-    .flyer-footer {
-      background: var(--footer);
-      padding: 1.3rem 3rem;
-      display: grid;
-      grid-template-columns: 1.2fr 1.5fr 1.2fr 1.2fr;
-      gap: 1.5rem;
-      color: #fff;
-      align-items: center;
-      font-size: 0.85rem;
-    }
-    .ft-item {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-    }
-    .ft-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1px solid rgba(200,145,90,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       flex-shrink: 0;
     }
-    .ft-icon svg {
-      width: 16px; height: 16px;
-      stroke: rgba(200,145,90,0.85);
-      fill: none;
-      stroke-width: 1.8;
+    .btn-jetzt-bewerben:hover {
+      background: var(--c-clay);
+      color: var(--c-dark);
     }
-    .ft-item strong { font-weight: 500; display: block; }
-    .ft-item small { color: rgba(255,255,255,0.6); font-size: 0.78rem; display: block; }
 
     /* === Responsive === */
     @media (max-width: 900px) {
-      .flyer-top { grid-template-columns: 1fr; }
-      .flyer-top-right { min-height: 280px; }
-      .benefits-row { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
-      .photo-strip { grid-template-columns: 1fr; }
-      .photo-strip img { height: 200px; }
-      .flyer-cta { flex-direction: column; text-align: center; }
-      .flyer-cta .left { flex-direction: column; text-align: center; }
-      .flyer-footer { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 500px) {
-      .benefits-row { grid-template-columns: 1fr; }
-      .flyer-footer { grid-template-columns: 1fr; }
-      .flyer-top-left { padding: 2rem 1.5rem; }
+      .stelle-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .stelle-hero-text {
+        padding: 3rem 1.5rem;
+        margin-left: 0;
+      }
+      .stelle-hero-image {
+        min-height: 320px;
+      }
+      .photo-strip {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .photo-strip img { aspect-ratio: 16/9; }
+      .stelle-cta-left { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -343,116 +284,96 @@
     </div>
   </header>
 
-  <!-- ============= FLYER PAGE ============= -->
-  <section style="padding: 7rem 1rem 4rem; background: var(--c-bg-2);">
-    <div class="flyer-wrap">
+  <!-- HERO -->
+  <section class="stelle-hero">
+    <div class="stelle-hero-text">
+      <img src="images/logo.png" alt="Orbis Müllerhof" class="logo-block">
+      <p class="tagline-small">GENIESSEN.  BEGEGNEN.  BLEIBEN.</p>
+      <p class="wir-suchen">Wir suchen eine/n</p>
+      <h1>Betriebsleiter/in</h1>
+      <p class="prozent">100 %</p>
+      <p class="intro">Du führst mit Herz, denkst unternehmerisch und liebst Gastfreundschaft? Dann gestalte mit uns ein neues Kapitel im Orbis.</p>
+    </div>
+    <div class="stelle-hero-image">
+      <img src="images/hero-aussen.jpg" alt="Orbis Müllerhof">
+    </div>
+  </section>
 
-      <!-- TOP: Olive Hero -->
-      <div class="flyer-top">
-        <div class="flyer-top-left">
-          <img src="images/logo.png" alt="Orbis Müllerhof" class="logo-flyer">
-          <p class="geniessen">GENIESSEN.  BEGEGNEN.  BLEIBEN.</p>
-          <p class="wir-suchen">Wir suchen eine/n</p>
-          <h1>Betriebsleiter/in</h1>
-          <p class="prozent">100 %</p>
-          <p class="intro-text">Du führst mit Herz, denkst unternehmerisch und liebst Gastfreundschaft? Dann gestalte mit uns ein neues Kapitel im Orbis.</p>
-        </div>
-        <div class="flyer-top-right">
-          <img src="images/hero-aussen.jpg" alt="Orbis Müllerhof">
-        </div>
-      </div>
-
-      <!-- MIDDLE: Benefits -->
-      <div class="flyer-mid">
-        <span class="eyebrow-flyer">UNSERE BENEFITS</span>
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="benefits-intro">
+        <span class="eyebrow center">Unsere Benefits</span>
         <h2>Mehr als nur <em>ein Arbeitsplatz.</em></h2>
-        <p class="desc">Im Orbis Müllerhof setzen wir auf langfristige Beziehungen — zu unseren Gästen und zu unserem Team. Diese Benefits warten auf Sie:</p>
-
-        <div class="benefits-row">
-
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/><path d="M22 9v5"/></svg>
-            </div>
-            <h4>Weiterbildungs- und<br>Entwicklungsmöglichkeiten</h4>
-            <p>Wir unterstützen interne und externe Weiterbildungen in Gastronomie, Hotellerie oder Führung mit einem jährlichen Budget von CHF 10'000.–.</p>
-          </div>
-
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14 20c0-2 2-4 5-4"/></svg>
-            </div>
-            <h4>Mitarbeiterevents</h4>
-            <p>Regelmässige Events stärken den Teamzusammenhalt und schaffen ein familiäres Arbeitsumfeld innerhalb und ausserhalb des Arbeitsalltags.</p>
-          </div>
-
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 13c0-4 4-7 8-7s8 3 8 7"/><circle cx="12" cy="4.5" r="1"/><path d="M2 15h20"/><path d="M3 18h18"/></svg>
-            </div>
-            <h4>Mitarbeiterrabatte &<br>Verpflegung</h4>
-            <p>25% Rabatt auf Essen im Restaurant (bis 4 Personen, ohne Getränke), kostenloser Kaffee und eine Mahlzeit gratis während jeder Arbeitsschicht.</p>
-          </div>
-
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24"><polygon points="12,3 14.6,9.5 21.5,9.8 16.2,14.2 18,21 12,17.3 6,21 7.8,14.2 2.5,9.8 9.4,9.5"/></svg>
-            </div>
-            <h4>Leistungsbonus</h4>
-            <p>Bei Erreichen der definierten Ziele erhalten alle Mitarbeitenden Ende November einen Bonus von bis zu maximal CHF 2'000.– pro Person.</p>
-          </div>
-
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><path d="M8 15l3 3 5-6"/></svg>
-            </div>
-            <h4>Flexible Einsatzplanung<br>& Mitsprache</h4>
-            <p>Frühzeitige Dienstplanung mit Rücksicht auf persönliche Wünsche. Regelmässige Teammeetings fördern Mitsprache und verbessern kontinuierlich unser Arbeitsumfeld.</p>
-          </div>
-
-        </div>
-
-        <div class="photo-strip">
-          <img src="images/erker.jpg" alt="Erker">
-          <img src="images/stuebli.jpg" alt="Stübli">
-          <img src="images/seminarraum.jpg" alt="Seminarraum">
-        </div>
+        <p>Im Orbis Müllerhof setzen wir auf langfristige Beziehungen — zu unseren Gästen und zu unserem Team. Diese Benefits warten auf Sie:</p>
       </div>
 
-      <!-- CTA -->
-      <div class="flyer-cta">
-        <div class="left">
-          <div class="leaf-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 20c4-9 11-15 18-15-1 9-7 15-15 15h-3z"/><path d="M3 20c4-4 8-7 12-9"/></svg>
-          </div>
-          <div>
-            <h3>Bereit für eine neue Herausforderung?</h3>
-            <p class="sub">Wir freuen uns darauf, Sie kennenzulernen.</p>
-          </div>
-        </div>
-        <a href="bewerbung.html" class="btn-bewerben">JETZT BEWERBEN →</a>
-      </div>
+      <div class="benefits-grid">
 
-      <!-- FOOTER -->
-      <div class="flyer-footer">
-        <div class="ft-item">
-          <div class="ft-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-7-7-7-13a7 7 0 0114 0c0 6-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-          <div><strong>Orbis Müllerhof</strong><small>5070 Frick</small></div>
+        <div class="benefit">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1 3 3 6 3s6-2 6-3v-5"/><path d="M22 9v5"/></svg>
+          </div>
+          <h3>Weiterbildungs- und Entwicklungsmöglichkeiten</h3>
+          <p>Wir unterstützen interne und externe Weiterbildungen in Gastronomie, Hotellerie oder Führung mit einem jährlichen Budget von CHF 10'000.–.</p>
         </div>
-        <div class="ft-item">
-          <div class="ft-icon"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><polyline points="3,7 12,13 21,7"/></svg></div>
-          <div><strong>bewerbung@orbis-fricktal.ch</strong></div>
+
+        <div class="benefit">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14 20c0-2 2-4 5-4"/></svg>
+          </div>
+          <h3>Mitarbeiterevents</h3>
+          <p>Regelmässige Events stärken den Teamzusammenhalt und schaffen ein familiäres Arbeitsumfeld innerhalb und ausserhalb des Arbeitsalltags.</p>
         </div>
-        <div class="ft-item">
-          <div class="ft-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a14 14 0 010 18"/><path d="M12 3a14 14 0 000 18"/></svg></div>
-          <div><strong>www.orbis-fricktal.ch</strong></div>
+
+        <div class="benefit">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 13c0-4 4-7 8-7s8 3 8 7"/><circle cx="12" cy="4.5" r="1"/><path d="M2 15h20"/><path d="M3 18h18"/></svg>
+          </div>
+          <h3>Mitarbeiterrabatte &amp; Verpflegung</h3>
+          <p>25% Rabatt auf Essen im Restaurant (bis 4 Personen, ohne Getränke), kostenloser Kaffee und eine Mahlzeit gratis während jeder Arbeitsschicht.</p>
         </div>
-        <div class="ft-item">
-          <div class="ft-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></div>
-          <div><strong>@orbis_muellerhof</strong></div>
+
+        <div class="benefit">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><polygon points="12,3 14.6,9.5 21.5,9.8 16.2,14.2 18,21 12,17.3 6,21 7.8,14.2 2.5,9.8 9.4,9.5"/></svg>
+          </div>
+          <h3>Leistungsbonus</h3>
+          <p>Bei Erreichen der definierten Ziele erhalten alle Mitarbeitenden Ende November einen Bonus von bis zu maximal CHF 2'000.– pro Person.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><path d="M8 15l3 3 5-6"/></svg>
+          </div>
+          <h3>Flexible Einsatzplanung &amp; Mitsprache</h3>
+          <p>Frühzeitige Dienstplanung mit Rücksicht auf persönliche Wünsche. Regelmässige Teammeetings fördern Mitsprache und verbessern kontinuierlich unser Arbeitsumfeld.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PHOTO STRIP -->
+    <div class="photo-strip">
+      <img src="images/erker.jpg" alt="Erker">
+      <img src="images/stuebli.jpg" alt="Stübli">
+      <img src="images/seminarraum.jpg" alt="Seminarraum">
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="stelle-cta">
+    <div class="container">
+      <div class="stelle-cta-left">
+        <div class="leaf-circle">
+          <svg viewBox="0 0 24 24"><path d="M3 20c4-9 11-15 18-15-1 9-7 15-15 15h-3z"/><path d="M3 20c4-4 8-7 12-9"/></svg>
+        </div>
+        <div>
+          <h2>Bereit für eine neue Herausforderung?</h2>
+          <p class="sub">Wir freuen uns darauf, Sie kennenzulernen.</p>
         </div>
       </div>
-
+      <a href="bewerbung.html" class="btn-jetzt-bewerben">JETZT BEWERBEN →</a>
     </div>
   </section>
 
