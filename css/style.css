@@ -769,15 +769,16 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
 .orbis-card {
   width: 100%;
   max-width: 460px;
-  aspect-ratio: 1.586/1;        /* ISO ID-1 Kreditkartenformat */
-  background: #1d1a17;          /* dunkles Braun-Schwarz */
+  aspect-ratio: 1.586/1;
+  background: #1d1a17;
   border-radius: 10px;
-  padding: 1.4rem 1.8rem;
   position: relative;
   overflow: hidden;
-  color: #A5B080;               /* Olive-Sage Grün */
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .orbis-card .card-eyebrow {
   font-size: 0.62rem;
@@ -786,30 +787,29 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   color: #A5B080;
   margin: 0;
   position: absolute;
-  top: 1.4rem;
-  left: 1.8rem;
+  top: 1.2rem;
+  left: 1.5rem;
 }
 .orbis-card .card-logo-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -52%);
-  width: 50%;
+  max-width: 55%;
+  max-height: 55%;
+  width: auto;
   height: auto;
+  object-fit: contain;
   display: block;
 }
 .orbis-card .card-name {
   position: absolute;
-  bottom: 1.4rem;
-  left: 1.8rem;
-  font-size: 0.85rem;
+  bottom: 1.2rem;
+  left: 1.5rem;
+  font-size: 0.78rem;
   letter-spacing: 1px;
   color: #A5B080;
   margin: 0;
 }
-/* Legacy h3/card-sub (alte Struktur ausblenden — wird durch Logo ersetzt) */
+/* Legacy hide (für Seiten, die alte HTML-Struktur haben) */
 .orbis-card h3,
-.orbis-card .card-sub { display: none; }
+.orbis-card .card-sub { display: none !important; }
 
 .steps {
   display: grid;
@@ -1097,7 +1097,8 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 700px) {
+/* Hamburger-Menü ab 1180px (Navigation passt sonst nicht mehr) */
+@media (max-width: 1180px) {
   .menu-toggle { display: block; }
   .nav-menu {
     position: absolute;
@@ -1116,6 +1117,10 @@ section { padding: clamp(4rem, 10vh, 8rem) 0; }
   .nav-menu a { color: var(--c-dark); }
   .lang-switcher { border-left: none; padding-left: 0; }
   .lang-switcher button { color: var(--c-muted); }
+  .scrolled .nav-menu { background: var(--c-bg); }
+}
+
+@media (max-width: 700px) {
 
   .hero { min-height: 90vh; }
   .hero-sub { min-height: 50vh; }
