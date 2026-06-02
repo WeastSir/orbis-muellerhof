@@ -223,7 +223,7 @@
       <div class="application-wrap">
 
         <!-- Position-Zusammenfassung -->
-        <div class="job-summary">
+        <div class="job-summary" id="jobSummary">
           <p class="meta">Du bewirbst dich für:</p>
           <p class="pos">Betriebsleiter/in 100 %</p>
         </div>
@@ -385,6 +385,29 @@
   <script src="js/main.js"></script>
 
   <script>
+    // === Dynamisch: Initiativbewerbung vs. Betriebsleiter ===
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const isInit = params.has('init');
+      if (isInit) {
+        // Position-Summary austauschen
+        const sum = document.getElementById('jobSummary');
+        if (sum) {
+          sum.innerHTML = `
+            <p class="meta">Du sendest uns eine</p>
+            <p class="pos">Initiativbewerbung</p>
+          `;
+        }
+        // Hero-Titel anpassen
+        const h1 = document.querySelector('.hero-text h1');
+        if (h1) h1.innerHTML = '<em>Initiativbewerbung.</em>';
+        const tagline = document.querySelector('.hero-text .hero-tagline');
+        if (tagline) tagline.textContent = 'Schick uns deine Unterlagen — wir melden uns sobald wir eine passende Möglichkeit für dich sehen.';
+        // Seitentitel ändern
+        document.title = 'Initiativbewerbung · Orbis Müllerhof';
+      }
+    })();
+
     // File-Upload UI feedback
     document.querySelectorAll('.file-upload input[type="file"]').forEach(input => {
       const wrap = input.closest('.file-upload');
