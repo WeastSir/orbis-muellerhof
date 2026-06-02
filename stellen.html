@@ -317,174 +317,108 @@
     </div>
   </section>
 
-  <!-- OFFENE POSITION als kompakte Karte -->
-  <section style="background: var(--c-bg-2); padding: clamp(4rem, 8vw, 6rem) 0;">
-    <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto 3rem;">
-        <span class="eyebrow center">Aktuelle Position</span>
-        <h2 style="margin-top: 1.5rem;">Offene Stelle.</h2>
+  <!-- OFFENE POSITION — Flyer-Stil mit Bildern und Orbis-Look -->
+
+  <!-- TITELBLOCK: Olive Dark mit grossem Bild rechts (wie der PDF-Flyer) -->
+  <section style="background: var(--c-dark); color: #fff; padding: 0; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 1fr 1.3fr; min-height: 480px; align-items: stretch;">
+      <div style="padding: clamp(3rem, 5vw, 5rem) clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; justify-content: center;">
+        <p style="font-size: 0.7rem; letter-spacing: 4px; color: var(--c-clay); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--c-clay); max-width: 260px;">
+          AKTUELLE POSITION
+        </p>
+        <p style="font-family: var(--f-serif); font-style: italic; font-size: clamp(1.2rem, 1.8vw, 1.6rem); color: rgba(255,255,255,0.85); margin: 0 0 0.3rem;">
+          Wir suchen eine/n
+        </p>
+        <h2 style="font-family: var(--f-serif); font-weight: 600; font-size: clamp(2.4rem, 5vw, 4rem); color: var(--c-clay); line-height: 1; margin: 0;">
+          Betriebsleiter/in
+        </h2>
+        <p style="font-family: var(--f-serif); font-size: clamp(1.8rem, 3vw, 2.5rem); color: #fff; margin: 0.3rem 0 1.5rem; line-height: 1;">
+          100 %
+        </p>
+        <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; max-width: 440px;">
+          Du führst mit Herz, denkst unternehmerisch und liebst Gastfreundschaft? Dann gestalte mit uns ein neues Kapitel im Orbis.
+        </p>
+        <!-- Tags -->
+        <div style="display: flex; gap: 0.6rem; margin-top: 2rem; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,0.1); color: var(--c-clay); padding: 0.5rem 0.9rem; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">100 %</span>
+          <span style="background: rgba(255,255,255,0.1); color: var(--c-clay); padding: 0.5rem 0.9rem; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">Leitung</span>
+          <span style="background: rgba(255,255,255,0.1); color: var(--c-clay); padding: 0.5rem 0.9rem; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;">Per sofort</span>
+        </div>
       </div>
+      <div style="position: relative; overflow: hidden; min-height: 360px;">
+        <img src="images/hero-aussen.jpg" alt="Orbis Müllerhof"
+             style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;">
+      </div>
+    </div>
+  </section>
 
-      <article class="job-card-detail">
-        <!-- Brauner Strich oben -->
-        <div class="job-card-stripe"></div>
-
-        <!-- Titel zentriert italic -->
-        <h2 class="job-title">Betriebsleiter/in, 100 %, w/m/d</h2>
-
-        <!-- 3 Tags -->
-        <div class="job-tags">
-          <span class="job-tag">100 %</span>
-          <span class="job-tag">Leitung / Gastronomie</span>
-          <span class="job-tag">Eintritt: per sofort</span>
+  <!-- DEINE MISSION mit Bild -->
+  <section class="section-bg">
+    <div class="container">
+      <div class="editorial">
+        <img src="images/lounge.jpg" alt="Mission Orbis">
+        <div>
+          <span class="eyebrow">Deine Mission</span>
+          <h2 style="margin: 1.5rem 0;">Den Müllerhof<br><em style="color: var(--c-brown);">prägen.</em></h2>
+          <p>
+            Du übernimmst die operative und strategische Leitung des Orbis Müllerhof und sorgst gemeinsam
+            mit deinem Team dafür, dass sich unsere Gäste vom ersten Moment an willkommen fühlen.
+          </p>
+          <p>
+            Du führst mit Herz und Übersicht, schaffst unvergessliche Erlebnisse und treibst die
+            Weiterentwicklung von Restaurant, Hotel, Kantine und Seminarbetrieb aktiv voran.
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- DEINE MISSION -->
-        <h3 class="job-section-title">Deine Mission</h3>
-        <p class="job-text">
-          Du übernimmst die operative und strategische Leitung des Orbis Müllerhof und sorgst gemeinsam
-          mit deinem Team dafür, dass sich unsere Gäste vom ersten Moment an willkommen fühlen. Du führst
-          mit Herz und Übersicht, schaffst unvergessliche Erlebnisse und treibst die Weiterentwicklung
-          von Restaurant, Hotel, Kantine und Seminarbetrieb aktiv voran.
-        </p>
-
-        <!-- DEINE AUFGABEN -->
-        <h3 class="job-section-title">Deine Aufgaben</h3>
-        <p class="job-text">
-          Führung und Weiterentwicklung aller Bereiche (Gastronomie, Hotel, Seminare, Housekeeping).
-          Verantwortung für Budget, Finanzkennzahlen und betriebswirtschaftliche Ziele. Sicherstellung
-          eines herausragenden Gästeerlebnisses und hoher Servicequalität. Personalrekrutierung,
-          ‑führung und Förderung deines Teams. Mitgestaltung von Marketing- und Vertriebsaktivitäten
-          mit externen Partnern. Operative Unterstützung im Tagesgeschäft und Koordination aller Abläufe.
-        </p>
-
-        <!-- WAS DU MITBRINGST -->
-        <h3 class="job-section-title">Was du mitbringst</h3>
-        <p class="job-text">
-          Abgeschlossene Ausbildung in der Gastronomie oder Hotellerie mit Weiterbildung (z. B. EFZ
-          mit Führungsausbildung) oder vergleichbar. Mindestens 3 Jahre Führungserfahrung — idealerweise
-          in einem kombinierten Gastro-, Hotel- oder Seminarbetrieb. Unternehmerisches Denken und
-          betriebswirtschaftliches Verständnis. Offene, kommunikative und dienstleistungsorientierte
-          Gastgeberpersönlichkeit. Sehr gute Deutschkenntnisse.
-        </p>
-
-        <!-- Footer mit Ansprechperson + Buttons -->
-        <div class="job-card-footer">
-          <p class="job-contact">Ansprechperson: <strong>Orbis Müllerhof Team</strong></p>
-          <div class="job-actions">
-            <a href="bewerbung.html" class="job-btn job-btn-primary">Bewerben</a>
-            <a href="content/jobs/betriebsleiter.pdf" class="job-btn job-btn-secondary" download>Inserat PDF ↗</a>
-          </div>
+  <!-- DEINE AUFGABEN mit Bild rechts -->
+  <section>
+    <div class="container">
+      <div class="editorial reverse">
+        <img src="images/restaurant-saal.jpg" alt="Aufgaben Orbis">
+        <div>
+          <span class="eyebrow">Deine Aufgaben</span>
+          <h2 style="margin: 1.5rem 0;">Vielseitig.<br><em style="color: var(--c-brown);">Verantwortungsvoll.</em></h2>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 0.5rem 0 0.5rem 1.7rem; position: relative; color: var(--c-text); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay);">○</span>Führung und Weiterentwicklung aller Bereiche (Gastronomie, Hotel, Seminare, Housekeeping)</li>
+            <li style="padding: 0.5rem 0 0.5rem 1.7rem; position: relative; color: var(--c-text); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay);">○</span>Verantwortung für Budget, Finanzkennzahlen und betriebswirtschaftliche Ziele</li>
+            <li style="padding: 0.5rem 0 0.5rem 1.7rem; position: relative; color: var(--c-text); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay);">○</span>Sicherstellung eines herausragenden Gästeerlebnisses und hoher Servicequalität</li>
+            <li style="padding: 0.5rem 0 0.5rem 1.7rem; position: relative; color: var(--c-text); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay);">○</span>Personalrekrutierung, ‑führung und Förderung deines Teams</li>
+            <li style="padding: 0.5rem 0 0.5rem 1.7rem; position: relative; color: var(--c-text); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay);">○</span>Mitgestaltung von Marketing- und Vertriebsaktivitäten mit externen Partnern</li>
+            <li style="padding: 0.5rem 0 0.5rem 1.7rem; position: relative; color: var(--c-text); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay);">○</span>Operative Unterstützung im Tagesgeschäft und Koordination aller Abläufe</li>
+          </ul>
         </div>
-      </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAS DU MITBRINGST — dunkler Stil mit Bild -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="editorial">
+        <img src="images/seminarraum.jpg" alt="Profil Orbis" style="aspect-ratio: 4/5; object-fit: cover;">
+        <div>
+          <span class="eyebrow" style="color: var(--c-clay);">Was du mitbringst</span>
+          <h2 style="margin: 1.5rem 0; color: #fff;">Erfahrung.<br><em style="color: var(--c-clay);">Persönlichkeit.</em></h2>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 0.7rem 0 0.7rem 1.9rem; position: relative; color: rgba(255,255,255,0.9); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.08);"><span style="position: absolute; left: 0; color: var(--c-clay); font-weight: 700;">✓</span>Abgeschlossene Ausbildung in Gastronomie/Hotellerie mit Weiterbildung (z. B. EFZ mit Führungsausbildung)</li>
+            <li style="padding: 0.7rem 0 0.7rem 1.9rem; position: relative; color: rgba(255,255,255,0.9); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.08);"><span style="position: absolute; left: 0; color: var(--c-clay); font-weight: 700;">✓</span>Mindestens 3 Jahre Führungserfahrung — idealerweise in einem kombinierten Gastro-, Hotel- oder Seminarbetrieb</li>
+            <li style="padding: 0.7rem 0 0.7rem 1.9rem; position: relative; color: rgba(255,255,255,0.9); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.08);"><span style="position: absolute; left: 0; color: var(--c-clay); font-weight: 700;">✓</span>Unternehmerisches Denken und betriebswirtschaftliches Verständnis</li>
+            <li style="padding: 0.7rem 0 0.7rem 1.9rem; position: relative; color: rgba(255,255,255,0.9); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.08);"><span style="position: absolute; left: 0; color: var(--c-clay); font-weight: 700;">✓</span>Offene, kommunikative und dienstleistungsorientierte Gastgeberpersönlichkeit</li>
+            <li style="padding: 0.7rem 0 0.7rem 1.9rem; position: relative; color: rgba(255,255,255,0.9); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--c-clay); font-weight: 700;">✓</span>Sehr gute Deutschkenntnisse</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <style>
-    .job-card-detail {
-      background: var(--c-white);
-      max-width: 900px;
-      margin: 0 auto;
-      padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 4rem);
-      box-shadow: 0 20px 60px rgba(43,38,32,0.08);
-      position: relative;
-    }
-    .job-card-stripe {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--c-brown);
-    }
-    .job-title {
-      font-family: var(--f-serif);
-      font-style: italic;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--c-dark);
-      text-align: center;
-      margin: 0.5rem 0 2rem;
-      font-weight: 500;
-    }
-    .job-tags {
-      display: flex;
-      gap: 0.7rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 2.5rem;
-    }
-    .job-tag {
-      background: var(--c-bg-2);
-      color: var(--c-brown);
-      padding: 0.5rem 1rem;
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    .job-section-title {
-      font-family: var(--f-sans);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--c-dark);
-      text-align: center;
-      margin: 2.5rem 0 1.2rem;
-    }
-    .job-text {
-      color: var(--c-muted);
-      font-size: 1rem;
-      line-height: 1.8;
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .job-card-footer {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--c-line);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .job-contact {
-      color: var(--c-dark);
-      margin: 0;
-      font-size: 0.95rem;
-    }
-    .job-actions {
-      display: flex;
-      gap: 1rem;
-    }
-    .job-btn {
-      padding: 1rem 2rem;
-      font-size: 0.78rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.25s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .job-btn-primary {
-      background: var(--c-dark);
-      color: #fff;
-      border: 2px solid var(--c-dark);
-    }
-    .job-btn-primary:hover { background: var(--c-brown); border-color: var(--c-brown); color: #fff; }
-    .job-btn-secondary {
-      background: transparent;
-      color: var(--c-dark);
-      border: 2px solid var(--c-dark);
-    }
-    .job-btn-secondary:hover { background: var(--c-dark); color: #fff; }
-    @media (max-width: 600px) {
-      .job-card-footer { flex-direction: column; align-items: stretch; text-align: center; }
-      .job-actions { flex-direction: column; }
-      .job-btn { justify-content: center; }
+    @media (max-width: 800px) {
+      section[style*="grid-template-columns: 1fr 1.3fr"] > div {
+        grid-template-columns: 1fr !important;
+      }
     }
   </style>
 
