@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Aktivitätenplan — Orbis Müllerhof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <style>
+    .hidden-badge {
+      display: inline-block;
+      background: var(--c-brown);
+      color: white;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .download-hero {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .download-card-big {
+      background: var(--c-bg-2);
+      padding: clamp(2.5rem, 5vw, 4rem);
+      margin-top: 3rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 20px 60px rgba(43,38,32,0.08);
+      border-top: 4px solid var(--c-brown);
+    }
+    .file-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: var(--c-dark);
+      color: var(--c-clay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--f-serif);
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+    .file-meta {
+      color: var(--c-muted);
+      font-size: 0.9rem;
+      margin: 0.5rem 0 2rem;
+    }
+    .btn-download-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.1rem 2.4rem;
+      border: 1.5px solid var(--c-brown);
+      background: var(--c-brown);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.25s;
+    }
+    .btn-download-big:hover {
+      background: transparent;
+      color: var(--c-brown);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimaler Header — keine Navigation, da diese Seite versteckt ist -->
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Orbis Müllerhof"></a>
+      <div style="color: var(--c-muted); font-size: 0.85rem;">
+        Geschützter Bereich · Nur via QR-Code
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top: 140px; padding-bottom: 5rem;">
+    <div class="container">
+      <div class="download-hero">
+        <span class="hidden-badge">QR-Code Zugriff</span>
+        <h1 style="margin-bottom: 0.5rem;">Aktivitätenplan</h1>
+        <p style="color: var(--c-muted); font-size: 1.05rem;">
+          Arbeitsauftrag &amp; Aktivitätenplan — Projekt Orbis Müllerhof, Team&nbsp;5
+        </p>
+      </div>
+
+      <div class="download-card-big">
+        <div class="file-icon">XLSX</div>
+        <h3 style="text-align: center; margin: 0 0 0.5rem;">PaulineArbeitsauftrag — Aktivitätenplan</h3>
+        <p class="file-meta" style="text-align: center;">
+          Microsoft Excel Datei · 25 KB
+        </p>
+        <div style="text-align: center;">
+          <a href="../content/dokumente/aktivitaetenplan.xlsx"
+             class="btn-download-big"
+             download="Aktivitaetenplan_Orbis_Muellerhof.xlsx">
+            ↓ &nbsp; Excel herunterladen
+          </a>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: var(--c-muted); font-size: 0.85rem; margin-top: 3rem; font-style: italic;">
+        Diese Datei ist nur über den QR-Code zugänglich und nicht von der Hauptwebseite verlinkt.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Orbis Müllerhof · Frick · Team 5 · SHL BWS</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
