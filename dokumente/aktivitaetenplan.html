@@ -21,101 +21,147 @@
       padding: 0.3rem 0.8rem;
       margin-bottom: 1rem;
     }
-    .download-hero {
-      max-width: 720px;
+    .doc-hero {
+      max-width: 900px;
       margin: 0 auto;
       text-align: center;
     }
-    .download-card-big {
-      background: var(--c-bg-2);
-      padding: clamp(2.5rem, 5vw, 4rem);
-      margin-top: 3rem;
-      max-width: 640px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 20px 60px rgba(43,38,32,0.08);
-      border-top: 4px solid var(--c-brown);
-    }
-    .file-icon {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 1.5rem;
-      background: var(--c-dark);
-      color: var(--c-clay);
+    .actions {
       display: flex;
-      align-items: center;
+      gap: 1rem;
       justify-content: center;
-      font-family: var(--f-serif);
-      font-weight: 600;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
+      flex-wrap: wrap;
+      margin-top: 2rem;
     }
-    .file-meta {
-      color: var(--c-muted);
-      font-size: 0.9rem;
-      margin: 0.5rem 0 2rem;
-    }
-    .btn-download-big {
+    .btn-action {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
-      padding: 1.1rem 2.4rem;
-      border: 1.5px solid var(--c-brown);
-      background: var(--c-brown);
-      color: #fff;
+      gap: 0.7rem;
+      padding: 0.95rem 2rem;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       font-weight: 600;
       transition: all 0.25s;
+      border: 1.5px solid var(--c-brown);
     }
-    .btn-download-big:hover {
+    .btn-primary {
+      background: var(--c-brown);
+      color: #fff;
+    }
+    .btn-primary:hover { background: transparent; color: var(--c-brown); }
+    .btn-secondary {
       background: transparent;
       color: var(--c-brown);
+    }
+    .btn-secondary:hover { background: var(--c-brown); color: #fff; }
+
+    /* Excel-Viewer */
+    .sheet-tabs {
+      display: flex;
+      gap: 0.3rem;
+      border-bottom: 2px solid var(--c-line);
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+    .sheet-tab {
+      padding: 0.7rem 1.4rem;
+      background: var(--c-bg-2);
+      border: none;
+      cursor: pointer;
+      font-family: var(--f-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--c-muted);
+      transition: all 0.2s;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+    }
+    .sheet-tab:hover { color: var(--c-dark); }
+    .sheet-tab.active {
+      background: #fff;
+      color: var(--c-brown);
+      border-bottom-color: var(--c-brown);
+    }
+    .sheet-container {
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(43,38,32,0.08);
+      overflow: auto;
+      max-height: 80vh;
+      border: 1px solid var(--c-line);
+    }
+    .sheet-container table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: var(--f-sans);
+      font-size: 0.85rem;
+    }
+    .sheet-container th,
+    .sheet-container td {
+      border: 1px solid #e5e0d8;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+      vertical-align: top;
+      min-width: 60px;
+    }
+    .sheet-container th {
+      background: var(--c-dark);
+      color: var(--c-clay);
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .sheet-container tr:nth-child(even) { background: var(--c-bg-2); }
+    .sheet-container tr:hover { background: #f7f3ec; }
+    .loading {
+      text-align: center;
+      padding: 4rem;
+      color: var(--c-muted);
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
-  <!-- Minimaler Header — keine Navigation, da diese Seite versteckt ist -->
+  <!-- Minimaler Header -->
   <header class="site-header">
     <div class="nav-wrapper">
       <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Orbis Müllerhof"></a>
       <div style="color: var(--c-muted); font-size: 0.85rem;">
-        Geschützter Bereich · Nur via QR-Code
+        Geschützter Bereich
       </div>
     </div>
   </header>
 
-  <section style="padding-top: 140px; padding-bottom: 5rem;">
+  <section style="padding-top: 140px; padding-bottom: 3rem;">
     <div class="container">
-      <div class="download-hero">
+      <div class="doc-hero">
         <span class="hidden-badge">QR-Code Zugriff</span>
         <h1 style="margin-bottom: 0.5rem;">Aktivitätenplan</h1>
         <p style="color: var(--c-muted); font-size: 1.05rem;">
           Arbeitsauftrag &amp; Aktivitätenplan — Projekt Orbis Müllerhof, Team&nbsp;5
         </p>
-      </div>
-
-      <div class="download-card-big">
-        <div class="file-icon">XLSX</div>
-        <h3 style="text-align: center; margin: 0 0 0.5rem;">PaulineArbeitsauftrag — Aktivitätenplan</h3>
-        <p class="file-meta" style="text-align: center;">
-          Microsoft Excel Datei · 25 KB
-        </p>
-        <div style="text-align: center;">
+        <div class="actions">
           <a href="../content/dokumente/aktivitaetenplan.xlsx"
-             class="btn-download-big"
+             class="btn-action btn-primary"
              download="Aktivitaetenplan_Orbis_Muellerhof.xlsx">
             ↓ &nbsp; Excel herunterladen
           </a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <p style="text-align: center; color: var(--c-muted); font-size: 0.85rem; margin-top: 3rem; font-style: italic;">
-        Diese Datei ist nur über den QR-Code zugänglich und nicht von der Hauptwebseite verlinkt.
-      </p>
+  <section style="padding-top: 0; padding-bottom: 5rem;">
+    <div class="container" style="max-width: 1400px;">
+      <div id="tabs" class="sheet-tabs"></div>
+      <div id="viewer" class="sheet-container">
+        <div class="loading">Datei wird geladen…</div>
+      </div>
     </div>
   </section>
 
@@ -126,6 +172,57 @@
       </div>
     </div>
   </footer>
+
+  <!-- SheetJS für Excel-Rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script>
+    (async function() {
+      const tabsEl = document.getElementById('tabs');
+      const viewerEl = document.getElementById('viewer');
+      try {
+        const res = await fetch('../content/dokumente/aktivitaetenplan.xlsx');
+        if (!res.ok) throw new Error('Datei nicht gefunden (HTTP ' + res.status + ')');
+        const buf = await res.arrayBuffer();
+        const wb = XLSX.read(buf, {type: 'array', cellStyles: true});
+
+        let activeSheet = wb.SheetNames[0];
+
+        function renderSheet(name) {
+          const ws = wb.Sheets[name];
+          // Generate clean HTML table
+          const html = XLSX.utils.sheet_to_html(ws, {editable: false, header: '', footer: ''});
+          // Extract only the <table>...</table> part
+          const tableMatch = html.match(/<table[\s\S]*?<\/table>/i);
+          viewerEl.innerHTML = tableMatch ? tableMatch[0] : html;
+          // Update tab states
+          tabsEl.querySelectorAll('.sheet-tab').forEach(b => {
+            b.classList.toggle('active', b.dataset.sheet === name);
+          });
+          // Scroll to top of viewer
+          viewerEl.scrollTop = 0;
+        }
+
+        // Render tabs only if multiple sheets
+        if (wb.SheetNames.length > 1) {
+          wb.SheetNames.forEach(name => {
+            const b = document.createElement('button');
+            b.className = 'sheet-tab' + (name === activeSheet ? ' active' : '');
+            b.dataset.sheet = name;
+            b.textContent = name;
+            b.onclick = () => renderSheet(name);
+            tabsEl.appendChild(b);
+          });
+        } else {
+          tabsEl.style.display = 'none';
+        }
+
+        renderSheet(activeSheet);
+      } catch (e) {
+        viewerEl.innerHTML = '<div class="loading">Datei konnte nicht geladen werden: ' + e.message + '<br><br>Bitte stattdessen oben herunterladen.</div>';
+        console.error(e);
+      }
+    })();
+  </script>
 
 </body>
 </html>
